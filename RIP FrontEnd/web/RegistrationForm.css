@@ -1,0 +1,195 @@
+:root{
+    --textcolor: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+/* Main Page */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("books/RegistrationBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo{
+    font-size: 2em;
+    color: var(--textcolor);
+    pointer-events: none;
+}
+
+.result{
+    position:fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    font-size: 1.5em;
+    color: var(--textcolor);
+    pointer-events: none;
+    background: black;
+    padding: 5px;
+}
+.FrontPage a{
+    position: relative;
+    font-size: 1.1em;
+    color: var(--textcolor);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    border-bottom: 2px solid var(--textcolor);
+    padding-bottom: 7px;
+    
+}
+
+.FrontPage button{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid var(--textcolor);
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: var(--textcolor);
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+    
+}
+
+.FrontPage button:hover{
+    background: var(--textcolor);
+    color: black;
+}
+
+/* Popup Page */
+.Register{
+    display: none;
+    color: var(--textcolor);
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid var(--textcolor,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 50px black ; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    padding: 40px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.Register::-webkit-scrollbar{
+    display: none;
+}
+.Register h2{
+    font-size: 2em;
+    padding-bottom: 20px; 
+    
+}
+
+.Register .close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: var(--textcolor);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.Register div{
+    width: 100%;
+}
+.Register-Div{
+    border-bottom: 2px solid var(--textcolor);
+    margin-bottom: 30px;
+}
+.Register-Verify{
+    margin-bottom: 20px;
+}
+
+.Register-Div label{
+    position: absolute;
+    width: 100%;
+    left: 40px;
+    transform: translateY(-20px);
+    font-size: 1em;
+    font-weight: 500;
+    pointer-events: none;
+}
+.Register-Div label::after{
+    content: ':';
+}
+
+.Register-Div input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textcolor);
+}
+.Register-Div span{
+    position: absolute;
+    right: 40px;
+    font-size: 1.2em;
+    pointer-events: none;
+    
+}
+.Register-Div ion-icon{
+    pointer-events: none;
+}
+
+#Code{
+    visibility: hidden;
+}
+
+.Register .button{
+    width: 100%;
+    height: 45px;
+    background: var(--textcolor);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: black;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.genre{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
